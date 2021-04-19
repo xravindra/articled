@@ -1,12 +1,14 @@
-import * as React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Routes from './Routes';
+import * as React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Page from './Page';
 
-class Root extends React.PureComponent {
+class Root extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Routes />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/page" component={Page} />
       </BrowserRouter>
     );
   }

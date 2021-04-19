@@ -77,6 +77,7 @@ const config = {
     }
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: './dist'
   },
   plugins: [
@@ -87,7 +88,7 @@ const config = {
       },
       minify: true
     }),
-  
+
     // new HtmlWebpackPlugin({
     //   appMountId: 'app',
     //   filename: 'index.html'
